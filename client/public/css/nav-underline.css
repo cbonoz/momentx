@@ -1,0 +1,81 @@
+#nav-toggle-button{
+    /*border-color:white;*/
+}
+body > nav > div > div.navbar-header > a{
+    color: white;
+    font-size: 2rem;
+    padding-left: 40px;
+}
+#navbar > form{
+    padding-right: 40px
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+        #navbar > form{
+        padding-right: 0px
+    }
+    body > nav > div > div.navbar-header > a{
+        padding-top: 20px;
+    }
+}
+.navbar-container {
+    text-align: center;
+    background-color: #2C556C;
+    box-shadow: 0px -20px 5px 20px #333333;
+    padding: 10px;
+    font-size: 0;
+}
+
+.navbar-container ul {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navbar-container ul li {
+    display: inline-block;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-container ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    /*padding: 10px;*/
+    transition: color 0.5s;
+}
+
+.navbar-container ul li .underline {
+    height: 3px;
+    background-color: transparent;
+    width: 0%;
+    transition: width 0.2s, background-color 0.5s;
+    margin: 0 auto;
+}
+
+.navbar-container ul li.active-link .underline {
+    width: 100%;
+    background-color: white;
+}
+
+.navbar-container ul li:hover .underline {
+    background-color: white;
+    width: 100%;
+}
+
+.navbar-container ul li:hover a {
+}
+
+.navbar-container ul li:active a {
+    transition: none;
+    color: rgba(255,255,255,0.76);
+}
+
+.navbar-container ul li:active .underline {
+    transition: none;
+    background-color: rgba(255,255,255,0.76);
+}

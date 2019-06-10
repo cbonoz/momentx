@@ -1,0 +1,147 @@
+div.background {
+    background: #961432;
+    color: white;
+    margin: 0px;
+    text-align: center;
+    font-size: 30px;
+}
+/*.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+}*/
+/*.video { position: relative; }
+
+.video a {
+   position: absolute;
+   display: block;
+   background: url(img/play.png);
+   height: 40px;
+   width: 40px;
+   top: 20px;
+   left: 20px;
+}*/
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.image-blurred-edge {
+    background-image: url('https://i.imgur.com/H7r6v4w.png');
+    background-size: cover;
+    background-position: center center;
+    max-width: 100%;
+    max-height: 100%;
+    width: 620px;
+    height: 349px;
+    /* you need to match the shadow color to your background or image border for the desired effect*/
+    box-shadow: 0 0 40px 40px white inset;
+}
+.text-white{
+    color:white;
+}
+.vertical-align {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+body{
+    margin:0px;
+    padding:0px;
+    font-family: 'Montserrat', 'sans-serif';
+    background: #F5F7FA;
+}
+p.highlight {
+    background: yellow;
+}
+
+.bg-dark{
+    background-color: #212529;/*background-color: #2C556C;*/
+}
+.card{
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+.bg-teal.bg-teal{
+    background-color: #2C556C;
+    color:white;
+    border-radius: 0;
+}
+/*button style*/
+.btn-custom {
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    border: 3px solid;
+    background-color: #2C556C;
+    border-color: #2C556C;
+    color:white;
+}
+.btn-custom:hover {
+    background: none;
+    border-color: #2C556C;
+    color: #2C556C;
+}
+.btn-custom:active {
+    background: #2C556C;
+    border-color: #2C556C;
+    color: white;
+}
+.btn-custom:focus {
+    background: #2C556C;
+    border-color: #2C556C;
+    color: white;
+}
+
+/*input address area*/
+#txtToAddr{
+    border: 2px solid #2C556C;
+    padding: 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 370px;
+}
+body > div > div > div:nth-child(3) > label {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*card and paper style*/
+.card-3 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.paper {
+    padding: 2rem;
+    background: white;
+    margin-top: 75px;
+}
+.media-left, .media-right, .media-body {
+    display: table-cell;
+    vertical-align: top;
+}
+
+/* use the max to specify at each container level */
+@media only screen and (max-width : 768px) {
+    .table-col-responsive {
+        /*width:360px;*/  /* adjust to desired wrapping */
+        /*display:table;*/
+        word-break: break-all;
+        white-space: pre-wrap; /* css-3 */
+        white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        word-wrap: break-word; /* Internet Explorer 5.5+ */
+    }
+}
