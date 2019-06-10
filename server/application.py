@@ -53,12 +53,17 @@ def create():
     if not body:
         abort(400)
 
-    token_name = body['token_name']
-    if not token_name:
+    if 'token_name' not in body:
         abort(400, {'message': 'token_name must be provided in body'})
+    
+    token_name = body['token_name']
+    if 'token_amount' not in body:
+        abort(400, {'message': 'token_amount must be provided in body'})
+
+    token_amount = body['token_amount']
 
     # create 100 of a new asset
-    create_cmd = 'e1-cli issueasset 100 1'
+    create_cmd = 'e1-cli issueasset %s 1' % token_amount
     issue_res = run_script(create_cmd)
     issue_data = json.loads(issue_res)
     assign_cmd = 'e1-dae -assetdir=%s:%s' % (issue_data['asset'], token_name)
