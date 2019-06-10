@@ -15,9 +15,6 @@ Beyond bitcoin_rpc, we use the elements framework to issue and manage new collec
 We enable our users to create custom assets for events. Share them, and celebrate their collection on the MomentX platform.
 
 *`server/`
-<pre>
-    pip install -r requirements.txt
-</pre>
 
 #### DEMO: 
 For the demo 
