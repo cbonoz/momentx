@@ -43,7 +43,7 @@ def balances():
     except Exception as general_exception:
         return "An Exception occured: " + str(general_exception)
 
-    return json.dumps(result['balance']})
+    return json.dumps({'data': result['balance']})
 
 
 # Create a new token
@@ -64,6 +64,65 @@ def create():
     assign_cmd = 'e1-dae -assetdir=%s:%s' % (issue_data['asset'], token_name)
     res = run_script(ISSUANCES_CMD)
     return json.dumps({'data': res})
+
+
+# Create a new token
+@app.route("/create_rpc", methods=['POST'])
+def create_rpc():
+    body = request.json
+
+    name = body['asset_name']
+    post = float(body['asset_value'])
+    asset_issuer_address = body['asset_issuer_address']
+    asset_shares = float(body['asset_shares']) 
+    try:
+        rpc_connection = AuthServiceProxy("http://%s:%s@127.0.0.1:%s/wallet/"%(rpc_user, rpc_password, rpc_port))
+        rst = rpc_connection.listunspent(1, 9999, [], False, {'asset': name})
+        
+        if len(rst) != 0:
+            txid = rst[0]['txid']
+            details = rpc_connection.gettransaction(txid)
+            sent_asset_shares = float(details['details'][0]['amount'])
+            if sent_asset_shares == asset_shares:
+                result = "Your token is listed for trade"
+                for p in get_posts():
+                    if name == p[1]:
+                        result = "Cannot recreate an existing token"
+                        break
+                else:
+                    create_post(name, post, asset_issuer_address, sent_asset_shares)
+
+    except JSONRPCException as json_exception:
+        return "A JSON RPC Exception occured: " + str(json_exception)
+    except Exception as general_exception:
+        return "An Exception occured: " + str(general_exception)
+
+    return json.dumps({'result': result})
+
+@app.route('/buy_rpc', methods=['POST'])
+def buy():
+    body = request.json
+    buyer_asset_name = body['buyer_asset_name']
+    buyer_shares = float(body['buyer_shares'])
+    buyer_recieve_address = body['buyer_recieve_address']
+
+    try:
+        rpc_connection = AuthServiceProxy("http://%s:%s@127.0.0.1:%s/wallet/"%(rpc_user, rpc_password, rpc_port))
+
+        receiver = rpc_connection.getnewaddress()
+
+        for p in get_posts():
+            if p[1] == buyer_asset_name:
+                global amt
+                amt = float(p[2]) * buyer_shares
+
+    except JSONRPCException as json_exception:
+        return "A JSON RPC Exception occured: " + str(json_exception)
+    except Exception as general_exception:
+        return "An Exception occured: " + str(general_exception)
+    
+    return json.dumps({'receiver': receiver, 'amount': amt})
+
 
 # Get issuances
 @app.route("/issuances", methods=['GET'])

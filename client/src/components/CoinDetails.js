@@ -14,13 +14,13 @@ class CoinDetails extends Component {
       <div className="paper card">
         <div className="container-fluid">
 
-          <div className="row">
-            <h1 className="coinInfo gold text-center" >Winter Olympics 2018</h1>
+          <div>
+            <h1 className="coinInfo gold text-center" >Winter Olympics 2018</h1><br/>
             <h4 className="coinInfo gold text-center" >Pyeong Chang, Korea</h4>
             <div className="col-12 center-block">
               <div id="coin-flip-cont" className="center-block">
                 <div id="coin" className="center-block">
-                  <div className="front frontmain">
+                  <div className="front frontmain text-center">
                     <img className="thisCoin" src={coin1}/>
                   </div>
                   <div className="back backmain">

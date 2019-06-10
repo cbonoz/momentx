@@ -56,6 +56,6 @@ BitcoinRPC
 Runnning a local bitcoin node.
 
 ### What's next for MomentX
-We are gonna go approach all the major league such as NBA, NFL, MLB, NHL and European soccer leagues to build out MomentX for everyone. We'd love for the opportunity to go out and win the Bitcoin Games by making collectibles shareable by everyone.
+We are gonna go approach all the major league such as NBA, NFL, MLB, NHL and European soccer leagues to build out MomentX for everyone. We'd love for the opportunity to go out and win the Bitcoin Games by making collectibles shareable by anyone.
 
 
