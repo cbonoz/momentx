@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "momentx liquid server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbonoz/momentx.git"
+  },
+  "keywords": [
+    "moment",
+    "fan",
+    "coin",
+    "collectible",
+    "bitcoin",
+    "liquid"
+  ],
+  "author": "Chris Buonocore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cbonoz/momentx/issues"
+  },
+  "homepage": "https://github.com/cbonoz/momentx#readme"
+}
