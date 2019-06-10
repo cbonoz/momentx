@@ -23,6 +23,6 @@ We were able to build our first Liquid app.
 BitcoinRPC
 
 ### What's next for MomentX
-We are gona go approach all the major league such as NBA, NFL, MLB, NHL and European soccer leagues to build out MomentX for everyone.
+We are gonna go approach all the major league such as NBA, NFL, MLB, NHL and European soccer leagues to build out MomentX for everyone.
 
 
