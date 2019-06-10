@@ -14,7 +14,7 @@ class Home extends Component {
               <div className="profile-header-img">
                 <img
                   className="img-circle"
-                  src="https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-1/p160x160/10603351_10100327685008484_5911941575418837546_n.jpg?oh=5a4ed337a1218a2b7f019a519df30eb5&amp;oe=5B01DFD5"
+                  src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/000/633/341/datas/profile.jpg"
                   width="50"
                   height="50"
                 />
@@ -25,7 +25,7 @@ class Home extends Component {
                     />
                   </span>
                 </div>
-                <h3 className="bolder text-center">Brian Fan</h3>
+                <h3 className="bolder text-center">Ruby Hsu</h3>
               </div>
             </div>
           </div>
